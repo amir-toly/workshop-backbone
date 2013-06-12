@@ -21,6 +21,7 @@ require.config({
 
 require(["Handlebars", 'views/LogsView', 'views/LeftPanelView', 'views/SearchView', 'models/FilterModel'], function(Handlebars, LogsView, LeftPanelView, SearchView, FilterModel) {
     // etape 1 : logsView
+    var logsView = new LogsView({el: "#content"});
 
     // etape 2 : searchView
 

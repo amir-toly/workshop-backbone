@@ -9,9 +9,11 @@ define(['models/LogCollection', 'text!templates/table.tmpl'], function(LogCollec
         },
 
         initialize: function() {
+        	this.render();
         },
 
         render: function() {
+        	this.$el.html(tableTpl);
         }
 
 	});
