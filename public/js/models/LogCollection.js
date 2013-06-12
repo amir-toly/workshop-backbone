@@ -2,7 +2,8 @@ define(['./LogModel'], function(LogModel) {
 
 	var LogCollection = Backbone.Collection.extend({
 
-	    model:LogModel
+	    model:LogModel,
+	    url: "/data/logs.json"
 
 	});
 

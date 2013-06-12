@@ -2,18 +2,20 @@ define(['models/LogCollection', 'text!templates/table.tmpl'], function(LogCollec
 
 	return Backbone.View.extend({
 
-        // underscore : template : _.template(tableTpl)
+        template: _.template(tableTpl),
         // handlebars : template : Handlebars.compile(tableTpl)
 
         events: {
         },
 
         initialize: function() {
-        	this.render();
+        	this.collection = new LogCollection();
+        	this.listenTo(this.collection, 'sync', this.render);
+        	this.collection.fetch();
         },
 
         render: function() {
-        	this.$el.html(tableTpl);
+        	this.$el.html(this.template(this.collection.toJSON()));
         }
 
 	});
