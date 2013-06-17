@@ -24,6 +24,7 @@ require(["Handlebars", 'views/LogsView', 'views/LeftPanelView', 'views/SearchVie
     var logsView = new LogsView({el: "#content"});
 
     // etape 2 : searchView
+    var searchView = new SearchView({el: "header"});
 
     // etape 3 : filterView
 
